@@ -2,6 +2,18 @@
 let cartIcon = document.querySelector("#cart-icon");
 let cart = document.querySelector(".cart");
 let closeCart = document.querySelector("#close-cart");
+
+//menu hamburguesa
+const ham = document.querySelector('.ham');
+const enlace = document.querySelector('.enlaces-menu');
+const barras = document.querySelectorAll('.ham span');
+
+ham.addEventListener('click', () => {
+    enlace.classList.toggle('activado');
+    barras.forEach(child => {child.classList.toggle('animado')});
+});
+
+
 //Open Cart
 cartIcon.onclick = () =>{
     cart.classList.add("active")
